@@ -151,7 +151,35 @@ h1 {
     border-radius: 4px;
 }
 
-.leaflet-popup-content h4 {
-    margin: 0 0 5px;
-    font-family: 'Playfair Display', serif;
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    #dashboard {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+        position: relative;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    #itinerary-list {
+        max-height: 250px;
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    #map-container {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .itinerary-item {
+        padding: 1.2rem; /* Slightly larger for touch */
+    }
 }
