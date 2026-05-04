@@ -24,9 +24,25 @@ async function init() {
         
         renderItinerary();
         startCountdown();
+        updateTimestamp();
     } catch (error) {
         console.error('Error loading itinerary:', error);
     }
+}
+
+// Update Last Modified Timestamp
+function updateTimestamp() {
+    const timestampElement = document.getElementById('update-timestamp');
+    if (!timestampElement) return;
+
+    const lastMod = new Date(document.lastModified);
+    const formattedDate = lastMod.toLocaleDateString('fr-FR');
+    const formattedTime = lastMod.toLocaleTimeString('fr-FR', { 
+        hour: '2-digit', 
+        minute: '2-digit' 
+    });
+    
+    timestampElement.textContent = `${formattedDate} ${formattedTime}`;
 }
 
 // Render Map and Sidebar
