@@ -19,7 +19,7 @@ const itineraryData = [
     "country": "Belgium",
     "coords": [50.8503, 4.3517],
     "date": "Oct 1, 2027",
-    "notes": "Départ de Bruxelles ! Le début de l'aventure 'Chasseurs de Soleil'."
+    "notes": "Départ de Bruxelles ! Le début de notre grande aventure."
   },
   {
     "id": 2,
