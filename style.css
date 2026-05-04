@@ -1,0 +1,157 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e67e22;
+    --bg-light: #f4f1ea;
+    --text-dark: #333;
+    --sidebar-width: 350px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+}
+
+#dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: var(--sidebar-width);
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+header {
+    padding: 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    margin: 5px 0 0;
+    opacity: 0.8;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}
+
+#countdown {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+#countdown p {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+}
+
+#timer {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+#budget-summary {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: left;
+}
+
+.budget-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+    opacity: 0.8;
+}
+
+.budget-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+
+.budget-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.budget-details li {
+    margin-bottom: 3px;
+}
+
+#itinerary-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.itinerary-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.itinerary-item:hover {
+    background: #f9f9f9;
+}
+
+.itinerary-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.itinerary-item .date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.itinerary-item .notes {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+#map-container {
+    flex: 1;
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Leaflet Popup Styling */
+.leaflet-popup-content-wrapper {
+    border-radius: 4px;
+}
+
+.leaflet-popup-content h4 {
+    margin: 0 0 5px;
+    font-family: 'Playfair Display', serif;
+}
