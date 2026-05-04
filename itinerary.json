@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "city": "Brussels",
+    "country": "Belgium",
+    "coords": [50.8503, 4.3517],
+    "date": "Oct 1, 2027",
+    "notes": "Départ de Bruxelles ! Le début de notre grande aventure."
+  },
+  {
+    "id": 2,
+    "city": "Tashkent",
+    "country": "Uzbekistan",
+    "coords": [41.2995, 69.2401],
+    "date": "Oct 2027",
+    "notes": "Automne : Météo excellente en Ouzbékistan, douce pour explorer la Route de la Soie."
+  },
+  {
+    "id": 3,
+    "city": "Ulaanbaatar",
+    "country": "Mongolia",
+    "coords": [47.8864, 106.9057],
+    "date": "Nov 2027",
+    "notes": "Automne : Belles couleurs en Mongolie, mais nuits glaciales (proche de 0°C)."
+  },
+  {
+    "id": 4,
+    "city": "Seoul",
+    "country": "South Korea",
+    "coords": [37.5665, 126.9780],
+    "date": "Nov 2027",
+    "notes": "Arrière-saison superbe en Asie de l'Est."
+  },
+  {
+    "id": 5,
+    "city": "Hanoi",
+    "country": "Vietnam",
+    "coords": [21.0285, 105.8542],
+    "date": "Dec 2027",
+    "notes": "Hiver : Saison sèche et fraîche au Vietnam, météo parfaite."
+  },
+  {
+    "id": 6,
+    "city": "Luang Prabang",
+    "country": "Laos",
+    "coords": [19.8833, 102.1333],
+    "date": "Jan 2028",
+    "notes": "Hiver : Saison sèche et fraîche au Laos."
+  },
+  {
+    "id": 7,
+    "city": "Siem Reap",
+    "country": "Cambodia",
+    "coords": [13.3633, 103.8567],
+    "date": "Jan 2028",
+    "notes": "Hiver : Saison sèche et fraîche au Cambodge."
+  },
+  {
+    "id": 8,
+    "city": "Delhi",
+    "country": "India",
+    "coords": [28.6139, 77.2090],
+    "date": "Feb 2028",
+    "notes": "Hiver : Saison sèche et fraîche, météo parfaite en Inde."
+  },
+  {
+    "id": 9,
+    "city": "Bali",
+    "country": "Indonesia",
+    "coords": [-8.4095, 115.1889],
+    "date": "Mar 2028",
+    "notes": "Printemps : L'automne à Bali, début de la bonne saison."
+  },
+  {
+    "id": 10,
+    "city": "Sydney",
+    "country": "Australia",
+    "coords": [-33.8688, 151.2093],
+    "date": "Apr 2028",
+    "notes": "Printemps : L'automne en Australie, climat très agréable."
+  },
+  {
+    "id": 11,
+    "city": "Papeete",
+    "country": "French Polynesia",
+    "coords": [-17.5333, -149.5667],
+    "date": "May 2028",
+    "notes": "Printemps : Début de la bonne saison dans le Pacifique."
+  },
+  {
+    "id": 12,
+    "city": "Fortaleza",
+    "country": "Brazil",
+    "coords": [-3.7327, -38.5270],
+    "date": "Jun 2028",
+    "notes": "Été : Plein été au Brésil, parfait pour les plages."
+  },
+  {
+    "id": 13,
+    "city": "Fort-de-France",
+    "country": "Martinique",
+    "coords": [14.6089, -61.0733],
+    "date": "Jul 2028",
+    "notes": "Été : Saison agréable dans les Caraïbes."
+  },
+  {
+    "id": 14,
+    "city": "Quebec City",
+    "country": "Canada",
+    "coords": [46.8139, -71.2080],
+    "date": "Aug 2028",
+    "notes": "Été : Festivals, nature verdoyante et parcs nationaux au Québec."
+  },
+  {
+    "id": 15,
+    "city": "Windhoek",
+    "country": "Namibia",
+    "coords": [-22.5609, 17.0658],
+    "date": "Sept 2028",
+    "notes": "Fin d'été : Saison sèche en Namibie, idéale pour clôturer en safari."
+  },
+  {
+    "id": 16,
+    "city": "Brussels",
+    "country": "Belgium",
+    "coords": [50.8503, 4.3517],
+    "date": "Oct 1, 2028",
+    "notes": "Retour à la maison après une année incroyable !"
+  }
+]
