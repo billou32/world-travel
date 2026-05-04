@@ -151,6 +151,16 @@ h1 {
     border-radius: 4px;
 }
 
+.leaflet-popup-content h4 {
+    margin: 0 0 5px;
+    font-family: 'Playfair Display', serif;
+}
+
+.leaflet-popup-content {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
     #dashboard {
