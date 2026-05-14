@@ -54,7 +54,7 @@ function renderItinerary() {
         const marker = L.marker(stop.coords).addTo(map);
         marker.bindPopup(`
             <h4>${stop.city}, ${stop.country}</h4>
-            <p><strong>Arriving:</strong> ${stop.date}</p>
+            <p><strong>Arrivée :</strong> ${stop.date}</p>
             <p>${stop.notes}</p>
         `);
         markers.push(marker);
@@ -119,7 +119,7 @@ function startCountdown() {
         const distance = DEPARTURE_DATE - now;
         
         if (distance < 0) {
-            timerElement.innerHTML = "Adventures Started!";
+            timerElement.innerHTML = "L'aventure a commencé !";
             return;
         }
         
@@ -127,7 +127,7 @@ function startCountdown() {
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         
-        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m`;
+        timerElement.innerHTML = `${days}j ${hours}h ${minutes}m`;
     }
     
     update();
