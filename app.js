@@ -204,9 +204,11 @@ function setupViewSwitching() {
         globeEl.classList.add('view-active');
         globeEl.classList.remove('view-hidden');
         
-        // Lazy initialize the globe to save bandwidth/GPU until clicked
+        // Lazy initialize the globe with a small delay to guarantee container layout reflow is complete
         if (!myGlobe) {
-            initGlobe();
+            setTimeout(() => {
+                initGlobe();
+            }, 100);
         } else {
             const controls = myGlobe.controls();
             if (controls) {
@@ -222,8 +224,8 @@ function initGlobe() {
     
     myGlobe = Globe()
         (globeEl)
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+        .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg')
+        .backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
         .showAtmosphere(true)
         .atmosphereColor('#3a225d') // modern indigo space glow
         .atmospherePower(2.5);
@@ -240,7 +242,7 @@ function initGlobe() {
         }
     });
 
-    // Populate Points
+    // Populate Points (Markers)
     const pointsData = itineraryData.map((stop, idx) => ({
         lat: stop.coords[0],
         lng: stop.coords[1],
@@ -255,11 +257,11 @@ function initGlobe() {
 
     myGlobe
         .pointsData(pointsData)
-        .pointLat('lat')
-        .pointLng('lng')
-        .pointColor('color')
+        .pointLat(d => d.lat)
+        .pointLng(d => d.lng)
+        .pointColor(d => d.color)
         .pointAltitude(0.01)
-        .pointRadius('size')
+        .pointRadius(d => d.size)
         .pointsMerge(false)
         .pointLabel(d => `
             <div class="scene-tooltip">
@@ -271,6 +273,22 @@ function initGlobe() {
         .onPointClick((point) => {
             selectStop(point.index, itineraryData[point.index]);
         });
+
+    // Populate Rings (rippling radar pulses for all stops)
+    const ringsData = itineraryData.map((stop, idx) => ({
+        lat: stop.coords[0],
+        lng: stop.coords[1],
+        color: '#e67e22'
+    }));
+
+    myGlobe
+        .ringsData(ringsData)
+        .ringLat(d => d.lat)
+        .ringLng(d => d.lng)
+        .ringColor(d => d.color)
+        .ringMaxRadius(1.5)
+        .ringPropagationSpeed(1.5)
+        .ringRepeatNum(2);
 
     // Populate Arcs (connecting consecutive itinerary points)
     const arcsData = [];
@@ -289,17 +307,17 @@ function initGlobe() {
 
     myGlobe
         .arcsData(arcsData)
-        .arcStartLat('startLat')
-        .arcStartLng('startLng')
-        .arcEndLat('endLat')
-        .arcEndLng('endLng')
-        .arcColor('color')
+        .arcStartLat(d => d.startLat)
+        .arcStartLng(d => d.startLng)
+        .arcEndLat(d => d.endLat)
+        .arcEndLng(d => d.endLng)
+        .arcColor(d => d.color)
         .arcDashLength(0.4)
         .arcDashGap(0.2)
-        .arcDashAnimateTime(2000) // Animated dashes flow in the direction of the journey
-        .arcStroke(1.2)
-        .arcAltitude(0.08)
-        .arcLabel('name');
+        .arcDashAnimateTime(1500) // Animated dashes flow in the direction of the journey (faster animation)
+        .arcStroke(1.5) // thicker for better presentation
+        .arcAltitude(0.12) // higher elegant arches
+        .arcLabel(d => d.name);
 
     // Auto Rotation Control
     const controls = myGlobe.controls();
