@@ -285,8 +285,7 @@ function initGlobe() {
         .ringLng(d => d.lng)
         .ringColor(d => d.color)
         .ringMaxRadius(1.5)
-        .ringPropagationSpeed(1.5)
-        .ringRepeatNum(2);
+        .ringPropagationSpeed(1.5);
 
     // Populate Arcs (connecting consecutive itinerary points)
     const arcsData = [];
