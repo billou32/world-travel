@@ -226,9 +226,7 @@ function initGlobe() {
         (globeEl)
         .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg')
         .backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
-        .showAtmosphere(true)
-        .atmosphereColor('#3a225d') // modern indigo space glow
-        .atmospherePower(2.5);
+        .showAtmosphere(true);
 
     // Initial sizing
     myGlobe.width(globeEl.clientWidth);
