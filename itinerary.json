@@ -9,6 +9,14 @@
   },
   {
     "id": 2,
+    "city": "Madrid",
+    "country": "Espagne",
+    "coords": [40.4168, -3.7038],
+    "date": "Octobre 2027",
+    "notes": "Première étape après le départ de Bruxelles, pour s'acclimater en douceur sous le soleil espagnol."
+  },
+  {
+    "id": 3,
     "city": "Tachkent",
     "country": "Ouzbékistan",
     "coords": [41.2995, 69.2401],
@@ -16,7 +24,7 @@
     "notes": "L'automne est la période idéale pour visiter l'Ouzbékistan. Les températures sont agréables (15°C à 24°C), parfait pour explorer la Route de la Soie."
   },
   {
-    "id": 3,
+    "id": 4,
     "city": "Séoul",
     "country": "Corée du Sud",
     "coords": [37.5665, 126.9780],
@@ -24,7 +32,7 @@
     "notes": "Saison du Danpung (feuillages d'automne). Ciels dégagés et paysages spectaculaires dans les parcs nationaux."
   },
   {
-    "id": 4,
+    "id": 5,
     "city": "Hanoï",
     "country": "Vietnam",
     "coords": [21.0285, 105.8542],
@@ -32,7 +40,7 @@
     "notes": "Saison fraîche et sèche. Idéal pour explorer la baie d'Halong sans l'humidité de la mousson."
   },
   {
-    "id": 5,
+    "id": 6,
     "city": "Luang Prabang",
     "country": "Laos",
     "coords": [19.8833, 102.1333],
@@ -40,7 +48,7 @@
     "notes": "Cœur de la saison sèche en Asie du Sud-Est continentale."
   },
   {
-    "id": 6,
+    "id": 7,
     "city": "Siem Reap",
     "country": "Cambodge",
     "coords": [13.3633, 103.8567],
@@ -48,7 +56,7 @@
     "notes": "Fenêtre parfaite pour explorer Angkor Wat sous un climat clément."
   },
   {
-    "id": 7,
+    "id": 8,
     "city": "Delhi",
     "country": "Inde",
     "coords": [28.6139, 77.2090],
@@ -56,7 +64,7 @@
     "notes": "Climat sec et tempéré. Préparation pour le festival Holi (11 mars)."
   },
   {
-    "id": 8,
+    "id": 9,
     "city": "Bali",
     "country": "Indonésie",
     "coords": [-8.4095, 115.1889],
@@ -64,7 +72,7 @@
     "notes": "Début de la saison sèche. Les foules estivales ne sont pas encore arrivées."
   },
   {
-    "id": 9,
+    "id": 10,
     "city": "Sydney",
     "country": "Australie",
     "coords": [-33.8688, 151.2093],
@@ -72,7 +80,7 @@
     "notes": "L'automne austral offre un climat doux pour explorer la Nouvelle-Galles du Sud."
   },
   {
-    "id": 10,
+    "id": 11,
     "city": "Papeete",
     "country": "Polynésie Française",
     "coords": [-17.5333, -149.5667],
@@ -80,7 +88,7 @@
     "notes": "Cœur de l'hiver austral (saison sèche), excellentes conditions pour les lagons."
   },
   {
-    "id": 11,
+    "id": 12,
     "city": "Oulan-Bator",
     "country": "Mongolie",
     "coords": [47.8864, 106.9057],
@@ -88,7 +96,7 @@
     "notes": "Mois optimal pour la steppe. Festival du Naadam (11-15 juillet) : lutte, courses de chevaux et tir à l'arc."
   },
   {
-    "id": 12,
+    "id": 13,
     "city": "Québec",
     "country": "Canada",
     "coords": [46.8139, -71.2080],
@@ -96,7 +104,7 @@
     "notes": "Été boréal, idéal pour les parcs nationaux et l'observation des baleines."
   },
   {
-    "id": 13,
+    "id": 14,
     "city": "Fort-de-France",
     "country": "Martinique",
     "coords": [14.6089, -61.0733],
@@ -104,7 +112,7 @@
     "notes": "Transition climatique avec une baisse progressive du risque cyclonique."
   },
   {
-    "id": 14,
+    "id": 15,
     "city": "Fortaleza",
     "country": "Brésil",
     "coords": [-3.7327, -38.5270],
@@ -112,7 +120,7 @@
     "notes": "Saison sèche dans le Nordeste, ensoleillement garanti."
   },
   {
-    "id": 15,
+    "id": 16,
     "city": "Windhoek",
     "country": "Namibie",
     "coords": [-22.5609, 17.0658],
@@ -120,7 +128,7 @@
     "notes": "Fin de la saison sèche. La faune se concentre autour des points d'eau, idéal pour le safari."
   },
   {
-    "id": 16,
+    "id": 17,
     "city": "Bruxelles",
     "country": "Belgique",
     "coords": [50.8503, 4.3517],
