@@ -287,7 +287,7 @@ function initGlobe() {
         .ringMaxRadius(1.5)
         .ringPropagationSpeed(1.5);
 
-    // Populate Arcs (connecting consecutive itinerary points)
+    // Populate Arcs (connecting consecutive itinerary points with dynamic comet-stream animation)
     const arcsData = [];
     for (let i = 0; i < itineraryData.length - 1; i++) {
         const start = itineraryData[i];
@@ -309,12 +309,52 @@ function initGlobe() {
         .arcEndLat(d => d.endLat)
         .arcEndLng(d => d.endLng)
         .arcColor(d => d.color)
-        .arcDashLength(0.4)
-        .arcDashGap(0.2)
-        .arcDashAnimateTime(1500) // Animated dashes flow in the direction of the journey (faster animation)
-        .arcStroke(1.5) // thicker for better presentation
-        .arcAltitude(0.12) // higher elegant arches
+        .arcDashLength(0.12) // Shorter, sharper light dashes
+        .arcDashGap(0.06)   // Denser flow stream
+        .arcDashAnimateTime(1100) // Much faster flow animation to show travel direction
+        .arcStroke(1.8) // Robust visible path line
+        .arcAltitude(0.12) // Spherical lift
         .arcLabel(d => d.name);
+
+    // Populate Midpoint Directional Labels (➔ ✈️)
+    const labelsData = [];
+    for (let i = 0; i < itineraryData.length - 1; i++) {
+        const start = itineraryData[i];
+        const end = itineraryData[i+1];
+        
+        // Handle antimeridian wrapping elegantly for midpoint calculation
+        let midLng = (start.coords[1] + end.coords[1]) / 2;
+        if (Math.abs(start.coords[1] - end.coords[1]) > 180) {
+            midLng = (start.coords[1] + end.coords[1] + 360) / 2;
+            if (midLng > 180) midLng -= 360;
+        }
+
+        labelsData.push({
+            lat: (start.coords[0] + end.coords[0]) / 2,
+            lng: midLng,
+            text: '➔ ✈️', // Directional Arrow and Airplane symbol
+            color: '#e67e22',
+            size: 0.8,
+            altitude: 0.08, // Perfectly nestled underneath the arc peak
+            name: `${start.city} ✈️ ${end.city}`
+        });
+    }
+
+    myGlobe
+        .labelsData(labelsData)
+        .labelLat(d => d.lat)
+        .labelLng(d => d.lng)
+        .labelText(d => d.text)
+        .labelColor(d => d.color)
+        .labelSize(d => d.size)
+        .labelAltitude(d => d.altitude)
+        .labelDotRadius(0.1) // Discreet anchor dot
+        .labelLabel(d => `
+            <div class="scene-tooltip">
+                <h4>Trajet Vol</h4>
+                <p>${d.name}</p>
+            </div>
+        `);
 
     // Auto Rotation Control
     const controls = myGlobe.controls();
