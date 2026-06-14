@@ -25,6 +25,7 @@ async function init() {
         renderItinerary();
         startCountdown();
         updateTimestamp();
+        setupMobileSidebar();
     } catch (error) {
         console.error('Error loading itinerary:', error);
     }
@@ -72,6 +73,9 @@ function renderItinerary() {
         item.onclick = () => {
             map.flyTo(stop.coords, 6);
             marker.openPopup();
+            if (window.closeMobileSidebar) {
+                window.closeMobileSidebar();
+            }
         };
         
         listContainer.appendChild(item);
@@ -132,6 +136,39 @@ function startCountdown() {
     
     update();
     setInterval(update, 60000); // Update every minute
+}
+
+// Setup mobile sidebar interaction
+function setupMobileSidebar() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const overlay = document.getElementById('sidebar-overlay');
+    const menuIcon = document.querySelector('.icon-menu');
+    const closeIcon = document.querySelector('.icon-close');
+
+    if (!menuToggle || !overlay) return;
+
+    function toggleSidebar() {
+        const isOpen = document.body.classList.toggle('sidebar-open');
+        if (isOpen) {
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+        } else {
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+        }
+    }
+
+    function closeSidebar() {
+        document.body.classList.remove('sidebar-open');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+    }
+
+    menuToggle.addEventListener('click', toggleSidebar);
+    overlay.addEventListener('click', closeSidebar);
+
+    // Expose closeSidebar globally so it can be called when clicking itinerary items
+    window.closeMobileSidebar = closeSidebar;
 }
 
 // Start App
