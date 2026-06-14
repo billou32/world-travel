@@ -46,12 +46,18 @@
             </footer>
         </aside>
         <main id="map-container">
-            <div id="map"></div>
+            <div id="view-switch-container">
+                <button id="btn-2d" class="switch-btn active" aria-label="Afficher la carte 2D">🗺️ Carte 2D</button>
+                <button id="btn-3d" class="switch-btn" aria-label="Afficher le Globe 3D">🌐 Globe 3D</button>
+            </div>
+            <div id="map" class="view-active"></div>
+            <div id="globe" class="view-hidden"></div>
         </main>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-polylinedecorator@1.6.0/dist/leaflet.polylineDecorator.js"></script>
+    <script src="https://unpkg.com/globe.gl"></script>
     <script src="app.js"></script>
 </body>
 </html>
